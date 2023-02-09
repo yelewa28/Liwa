@@ -31,3 +31,39 @@ let yearOfTitle = document.querySelector(
 let yearOfCopy = document.querySelector(".copyright .year_copy");
 yearOfTitle.innerHTML = new Date().getFullYear();
 yearOfCopy.innerHTML = new Date().getFullYear();
+
+let sectionOfProgress = document.querySelector(
+  ".skills .container .box-skills "
+);
+let spansProgress = document.querySelectorAll(
+  ".skills .container .box-skills .skill .progress span"
+);
+let spansOfNumber = document.querySelectorAll(".stats .container .box .numper");
+let sectionOfStates = document.querySelector(".stats");
+let started = false;
+
+window.onscroll = function () {
+  if (window.scrollY >= sectionOfProgress.offsetTop - 150) {
+    spansProgress.forEach(function (span) {
+      span.style.width = span.dataset.width;
+    });
+  }
+  if (window.scrollY >= sectionOfStates.offsetTop) {
+    if (!started) {
+      spansOfNumber.forEach(function (span) {
+        numberCounter(span);
+      });
+    }
+    started = true;
+  }
+};
+
+function numberCounter(el) {
+  let stopped = el.dataset.number;
+  let count = setInterval(function () {
+    el.textContent++;
+    if (el.textContent == stopped) {
+      clearInterval(count);
+    }
+  }, 2000 / stopped);
+}
