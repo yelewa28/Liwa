@@ -860,29 +860,33 @@ a {
   position: relative;
 }
 .skills .container .box-skills .skill-one .progress span {
-  width: 80%;
+  width: 0;
   height: 30px;
   background-color: var(--main-color);
   position: absolute;
+  transition: 0.5s;
   
 }
 .skills .container .box-skills .skill-two .progress span {
-  width: 85%;
+  width: 0;
   height: 30px;
   background-color: var(--main-color);
   position: absolute;
+  transition: 0.5s;
 }
 .skills .container .box-skills .skill-three .progress span {
-  width: 70%;
+  width: 0;
   height: 30px;
   background-color: var(--main-color);
   position: absolute;
+  transition: 0.5s;
 }
 .skills .container .box-skills .skill-four .progress span {
-  width: 90%;
+  width: 0;
   height: 30px;
   background-color: var(--main-color);
   position: absolute;
+  transition: 0.5s;
 }
  /* End Skills */
  /* Start work Steps */
