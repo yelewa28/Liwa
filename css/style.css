@@ -1514,7 +1514,7 @@ a {
 .footer .copyright i {
   color: var(--main-color);
 }
-.footer .copyright span {
+.footer .copyright .name_copy {
   color: var(--main-color);
   animation-name: copyright;
   animation-duration: 3s;
